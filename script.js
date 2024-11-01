@@ -1,9 +1,10 @@
-const divEle = document.querySelector('.card-container');
+function getDetailViaId(userId){
+  const divEle = document.querySelector('.card-container');
 let data = '';
 
   const req = new XMLHttpRequest();
 
-  req.open('GET', `https://dummyjson.com/users/1`);
+  req.open('GET', `https://dummyjson.com/users/${userId}`);
   req.send();
 
   req.addEventListener('load', function () {
@@ -21,3 +22,6 @@ let data = '';
   });
 
 
+}
+
+getDetailViaId(15);
