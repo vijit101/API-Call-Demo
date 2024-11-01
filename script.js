@@ -17,11 +17,14 @@ let data = '';
       <p class="email">${data.email}</p>
       <button class="btn">View Profile</button>
       </div>`;
-    divEle.innerHTML = cardHtml;
+    divEle.insertAdjacentHTML("beforeend",cardHtml); // here it makes a new card and inserts it before end
     
   });
 
 
 }
-
-getDetailViaId(15);
+getDetailViaId(1); // the order of cards change as per the load times of the fx hence a call back is needed to fix it 
+getDetailViaId(2); 
+getDetailViaId(5); 
+getDetailViaId(10); 
+getDetailViaId(15); 
